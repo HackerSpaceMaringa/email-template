@@ -11,7 +11,7 @@ html
     title Newsletter - Hackerspace Maringá
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    meta(http-equiv='refresh' content='5')
+    meta(http-equiv='refresh' content='15')
 
 
     link(rel='preconnect' href='https://fonts.googleapis.com')
@@ -20,8 +20,10 @@ html
 
   body
     header
-      h1 Newsletter
-      h2 Hackerspace Maringá
+      include hackerspace.svg
+      div.text
+        h1 Newsletter
+        h2 Hackerspace Maringá
 
     article
       div.title
@@ -70,6 +72,14 @@ html
           div.content
             h4=project.title
             p !{fns.markdown(project.content)}
+
+      section.contrib
+        p Contribua com o Hackerspace pelo PIX abaixo
+        img(src=pix alt='PIX')
+
+      p.pix
+        | Chave PIX: 
+        strong maringahackerspace@gmail.com
 
     footer
       section.left
