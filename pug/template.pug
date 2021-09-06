@@ -1,0 +1,84 @@
+mixin money(value)
+  if value > 0
+    span.value.positive= fns.formatCurrency(value)
+  else if value < 0
+    span.value.negative= fns.formatCurrency(Math.abs(value))
+  else
+    span.value.neutral= fns.formatCurrency(value)
+
+html
+  head
+    title Newsletter - Hackerspace Maringá
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(http-equiv='refresh' content='5')
+
+
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap' rel='stylesheet')
+
+  body
+    header
+      h1 Newsletter
+      h2 Hackerspace Maringá
+
+    article
+      div.title
+        h3 Fechamento de Caixa
+        h4= `Período: ${balance.from} até ${balance.to}`
+
+      section
+        - let donationTotal = 0;
+        h4 Arrecadações
+        ul.donation
+          each donation in balance.donations
+            - donationTotal += donation.value
+            li
+              span= donation.name
+              hr
+              +money(donation.value)
+          li.total
+            span.desc SUBTOTAL
+            hr
+            +money(donationTotal)
+
+        - let expenditureTotal = 0;
+        h4 Gastos
+        ul.expenditure
+          each expenditure in balance.expenditures
+            - expenditureTotal += expenditure.value
+            li
+              span= expenditure.name
+              hr
+              +money(expenditure.value)
+          li.total
+            span.desc SUBTOTAL
+            hr
+            +money(expenditureTotal)
+
+        - const balanceTotal = donationTotal + expenditureTotal;
+        h4.balance
+          span BALANÇO
+          hr
+          +money(balanceTotal)
+
+      h3 Atualizações de projetos
+      each project in projects
+        section.project
+          img(src=project.image alt=project.title align=right)
+          div.content
+            h4=project.title
+            p !{fns.markdown(project.content)}
+
+    footer
+      section.left
+        each line in address
+          p= line
+      section.right
+        each link in links
+          p
+            a(href=link.url)= link.name
+
+    style
+      include style.css

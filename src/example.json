@@ -1,0 +1,57 @@
+{
+  "filename": "index.html",
+  "address": [
+    "Rua Vitória, 943 - Vila Esperança",
+    "87020-320",
+    "Maringá - PR"
+  ],
+  "links": [{
+    "name": "Instagram",
+    "url": "https://instagram.com/hackerspacemaringa"
+  }, {
+    "name": "Email",
+    "url": "mailto:maringahackerspace@gmail.com"
+  }],
+  "balance": {
+    "from": "13/Jun",
+    "to": "13/Ago",
+    "donations": [{
+      "name": "Membros",
+      "value": 3042.24
+    }, {
+      "name": "Grupos",
+      "value": 0.0
+    }, {
+      "name": "Professores",
+      "value": 0.0
+    }],
+    "expenditures": [{
+      "name": "Energia elétrica",
+      "value": -112.0
+    }, {
+      "name": "Água",
+      "value": 0.0
+    }, {
+      "name": "Internet",
+      "value": 0.0
+    }, {
+      "name": "Insumos",
+      "value": 0.0
+    }, {
+      "name": "Aluguel",
+      "value": 0.0
+    }, {
+      "name": "Outros",
+      "value": 0.0
+    }]
+  },
+  "projects": [{
+    "title": "Projeto Um",
+    "content": "Conteúdo com Markdown, **bold**, *italic*, `code`.",
+    "image": "https://lh5.googleusercontent.com/p/AF1QipM3chvG2Kw44mZ5fbZdyvWDRzFkR37hXlqM1fnH=w1080-k-no"
+  }, {
+    "title": "Projeto Dois",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis ultrices venenatis. Etiam nec egestas eros. Aliquam pulvinar, justo ac pretium varius, enim lectus porttitor neque, eu venenatis nunc nulla ut lacus. Phasellus tristique, mi ut feugiat ultrices, velit ipsum auctor urna, id rhoncus mi lacus vitae felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sagittis nisi vel enim cursus feugiat. Sed consectetur sit amet nisi et tempus. Curabitur ullamcorper tortor id nunc vulputate consectetur. Donec egestas ullamcorper sem sit amet porta. Morbi iaculis, augue vitae cursus porta, mauris purus commodo ligula, et egestas ligula nulla a nibh.",
+    "image": "https://lh5.googleusercontent.com/p/AF1QipM3chvG2Kw44mZ5fbZdyvWDRzFkR37hXlqM1fnH=w1080-k-no"
+  }]
+}
